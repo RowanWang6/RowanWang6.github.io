@@ -1,0 +1,379 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>JS 算法 | Rowan&#39;s Page</title>
+<link rel="shortcut icon" href="https://rowanwang6.github.io/favicon.ico?v=1695113523701">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://rowanwang6.github.io/styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+
+
+</head>
+<body class="home blog ct-body standard">
+<div id="overflow-container" class="overflow-container">
+  <a class="skip-content" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://rowanwang6.github.io/tag/web/">web</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://rowanwang6.github.io/tag/CV/">Computer Vison</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://rowanwang6.github.io/tag/myself/">Myself</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://rowanwang6.github.io">  Rowan&#39;s Page </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description"></p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">Home Page</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">Tags</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">Archives</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">About</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+
+        <div class="entry-meta">
+          <span class="date">· 2022-08-08 ·</span> <span> / </span>
+          <span class="author">
+            <a href="https://rowanwang6.github.io" title="" rel="author"> xkwang7-c@my.cityu.edu.hk</a>
+          </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://rowanwang6.github.io/tag/web/">web</a>
+                </span>
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>JS 算法</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>输入： <code>let str = readline();</code></p>
+<h1 id="字符串">字符串</h1>
+<h2 id="字符串切片">字符串切片</h2>
+<ol>
+<li>
+<p><code>slice(start, end)</code><br>
+只能传入切片开头和结尾的index，不能固定切片长度，index可以为负数，但start不可以大于end；<br>
+第一个参数比第二个参数大，结果返回空字符串；<br>
+传入参数是负数，slice()会先做运算 test.length + 负数参数。</p>
+</li>
+<li>
+<p><code>substr(start, length)</code><br>
+从start开始，返回length长度字符，支持负数，不支持数组。传入参数超过length返回空字符<br>
+串；<br>
+传入负数，则从字符串的尾部开始算起始位置，-1指最后一个字符，-2指倒数第二个字符；<br>
+当传入的第一个参数是负数且它的绝对值超过length，这个负数转化为0，当传入的第二个参数是负数，等价于0，截取0个字符，返回空字符串。</p>
+</li>
+<li>
+<p><code>substring(start, stop)</code><br>
+第二个参数==第一个参数，返回空字符串；<br>
+传入两个参数，不管在第一还是第二位置，都会将小的参数作为第一个参数，较大的作为第二个参数；<br>
+任何一个参数为负数或者NaN的时候，自动将其转换为0；<br>
+任何一个参数大于length，按照length处理；<br>
+只传入一个参数时，为start。</p>
+</li>
+<li>
+<p><code>split(separator, length)</code></p>
+</li>
+<li>
+<p><code>join(separator)</code></p>
+</li>
+<li>
+<p><code>splice(start, length, …args)</code></p>
+</li>
+</ol>
+<h2 id="字符串填充">字符串填充</h2>
+<p><code>string.padEnd(targetLength, padString)</code></p>
+<h1 id="进制转换">进制转换</h1>
+<p><code>parseInt(num, 16)</code> 转换16进制<br>
+<code>Number(string)</code></p>
+<pre><code class="language-js">- parseInt(num,8);   //八进制转十进制 
+- parseInt(num,16);   //十六进制转十进制 
+- parseInt(num).toString(8)  //十进制转八进制 
+- parseInt(num).toString(16)   //十进制转十六进制 
+- parseInt(num,2).toString(8)   //二进制转八进制 
+- parseInt(num,2).toString(16)  //二进制转十六进制 
+- parseInt(num,8).toString(2)   //八进制转二
+</code></pre>
+<h1 id="质数因子">质数因子</h1>
+<p>取余，<code>%</code><br>
+1.判断终止条件: sqrt(num)<br>
+2.本身就是质数的情况<br>
+从2开始, 如果余数为0, 继续除当前(包括重复的质因子)就行</p>
+<h1 id="数组去重">数组去重</h1>
+<p>重复元素在Set中自动被过滤</p>
+<pre><code class="language-js">var s = new Set([1, 2, 3, 3, '3']);
+s; // Set {1, 2, 3, &quot;3&quot;}
+</code></pre>
+<h1 id="排序">排序</h1>
+<p>sort() 方法中有一个参数，非必填，但是在忽略此参数的情况下，使用sort()排序会默认先调用数组中每一项元素的toString()方法，然后根据首字母的 ASCLL 码值的大小进行排序。</p>
+<pre><code class="language-js">//升序 // sort((a,b)=&gt;{return a-b;})
+arr.sort(function(x,y){
+    retun x-y;
+});
+//降序
+arr.sort(function(x,y){
+    retun y-x;
+});
+</code></pre>
+<h1 id="字符串替换">字符串替换</h1>
+<p><code>str.replace(/[(a-z)]/g, a =&gt;{...}</code></p>
+<pre><code class="language-js">let text = readline();
+const arr = ['abc',2,'def',3,'ghi',4,'jkl',5,'mno',6,'pqrs',7,'tuv',8,'wxyz',9]
+text = text.replace(/[(a-z)]/g,a =&gt; {
+    for(let i=0;i&lt;arr.length;i++){
+        if(typeof arr[i] == 'string' &amp;&amp; arr[i].indexOf(a) != -1){
+            return arr[i+1]
+        }
+    }
+})
+text = text.replace(/([A-Z])/g,a =&gt; {
+    if(a == 'Z'){
+        return 'a'
+    }else {
+        return String.fromCharCode(a.toLowerCase().charCodeAt(0)+1)
+    }
+})
+console.log(text)
+</code></pre>
+<h1 id="统计字符串出现次数">统计字符串出现次数</h1>
+<pre><code class="language-js">for (let i = 0; i &lt; str.length; i++) {
+  if (obj[str[i]]) obj[str[i]]++;
+  else obj[str[i]] = 1;
+}// 输入aabcddd  {a:2 b: 1 c:1 d:3}
+
+// 找到出现次数最少的字符串，不拼接它们（删除）
+let min = Math.min(...Object.values(obj));
+for (let i = 0; i &lt; str.length; i++) {
+  if (obj[str[i]] !== min) res += str[i];
+}
+</code></pre>
+<h1 id="素数">素数</h1>
+<pre><code class="language-js">function isPrime(num){
+    for(let i = 2; i &lt;= Math.sqrt(num); i++){
+        if(num % i == 0) return false
+    }
+    return true
+}
+</code></pre>
+<h1 id="生成-x-y之间的随机整数">生成 [x, y]之间的随机整数</h1>
+<pre><code class="language-js">function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+console.log(getRandom(1, 10));
+//生成 [0, x) 之间的随机数
+Math.round(Math.random()*x)
+//生成 [x, y) 之间的随机数
+Math.round(Math.random()*(y-x)+x)
+</code></pre>
+
+            </article>
+          </div>
+          <div class='entry-meta-bottom'>
+            <div class="entry-categories">
+              <p>
+                <span>Categories</span>
+                
+                  
+                    
+                  <a href="https://rowanwang6.github.io/tag/web/" title="View all posts in web">web</a>
+                    
+                    
+                    
+                  <a href="https://rowanwang6.github.io/tag/CV/" title="View all posts in Computer Vison">Computer Vison</a>
+                    
+                    
+                    
+                  <a href="https://rowanwang6.github.io/tag/myself/" title="View all posts in Myself">Myself</a>
+                    
+                    
+              </p>
+            </div>
+            <div class="entry-tags">
+              <p><span>Tags</span>
+              </p>
+            </div>
+          </div>
+          <div class="author-meta">
+            <div class="author">
+              <img alt='' src="https://rowanwang6.github.io/images/avatar.png?v=1695113523701" class='avatar avatar-72 photo' height='72' width='72'>
+              <span>WRITTEN BY: &nbsp;&nbsp;&nbsp;<a href='https://rowanwang6.github.io'>Rowan</a> </span>
+            </div>
+            <div class="bio">
+              <p>Hi! Hope you enjoy my sharing. If there is any error or advice, please inform me.</p>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          </div>
+        </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" href="https://rowanwang6.github.io/post/vuejs/">下一篇->Vue.js</a>
+              </div>
+            </nav>
+          
+      </div>
+      <section id="comments" class="comments">
+        
+      </section>
+    </div>
+  </div>
+  <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://rowanwang6.github.io"> Rowan&#39;s Page </a>
+    </h1>
+    <p class="site-description"></p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>xkwang7-c@my.cityu.edu.hk</p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://rowanwang6.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://rowanwang6.github.io/media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://rowanwang6.github.io/media/scripts/lib/production.min.js"></script>
+
+</div>
+</body>
+</html>
+
